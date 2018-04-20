@@ -4,43 +4,84 @@
 @import 'libs/skel';
 
 /*
-	Axiom by Pixelarity
+	Strata by Pixelarity
 	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
 
-/* FA Icons */
+/* Button */
 
-	.pennant {
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	.button {
 		position: relative;
 		-ms-behavior: url('assets/js/ie/PIE.htc');
 	}
 
-/* Nav */
+/* Form */
 
-	.dropotron.level-0 {
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select,
+	textarea {
 		position: relative;
 		-ms-behavior: url('assets/js/ie/PIE.htc');
-		margin-top: -0.40em;
+	}
 
-		&:before {
-			border-left: solid 0.8em #445058;
-			border-right: solid 0.8em #445058;
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select {
+		height: _size(element-height);
+		line-height: _size(element-height);
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		& + label {
+			&:before {
+				display: none;
+			}
 		}
 	}
 
-/* Featured */
+/* Image */
 
-	#featured .image img, ul.icons li a {
+	.image {
 		position: relative;
 		-ms-behavior: url('assets/js/ie/PIE.htc');
+
+		&:before, &:after {
+			display: none !important;
+		}
+
+		img {
+			position: relative;
+			-ms-behavior: url('assets/js/ie/PIE.htc');
+		}
 	}
 
-/* Slidertron */
+/* Header */
 
-	#slider {
-		.previous-button, .next-button {
-			background: #FFF;
-			-ms-behavior: url('assets/js/ie/PIE.htc');
+	#header {
+		background-image: url('../../images/bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
+
+		h1 {
+			color: _palette(accent2, fg-bold);
+		}
+	}
+
+/* Footer */
+
+	#footer {
+		.icons {
+			a {
+				color: _palette(accent2, fg-bold);
+			}
 		}
 	}
